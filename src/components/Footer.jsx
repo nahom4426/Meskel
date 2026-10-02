@@ -10,11 +10,10 @@ export default function Footer({ lang, theme }) {
 
   return (
     <footer
-      className={`relative py-12 border-t text-center text-xs sm:text-sm transition-colors duration-400 ${
-        isLight
+      className={`relative py-12 border-t text-center text-xs sm:text-sm transition-colors duration-400 ${isLight
           ? 'bg-amber-100/70 border-amber-300 text-amber-900'
           : 'bg-[#0a0d12] border-amber-500/20 text-stone-400'
-      }`}
+        }`}
     >
       <div className="tibeb-divider mb-6" />
 
@@ -35,13 +34,18 @@ export default function Footer({ lang, theme }) {
             : 'May Light Triumph Over Darkness ✦ Peace & Joy for All'}
         </p>
 
+        <p className="text-xs font-medium text-amber-900/80 dark:text-amber-400/90 tracking-wider pt-2 border-t border-amber-500/20 px-4">
+          {lang === 'am'
+            ? 'በናሆም ኣ የተዘጋጀና የተገነባ ✦ Designed & Developed by Nahom A'
+            : 'Designed & Developed by Nahom A'}
+        </p>
+
         <button
           onClick={scrollToTop}
-          className={`mt-4 p-2.5 rounded-full border transition-colors ${
-            isLight
+          className={`mt-4 p-2.5 rounded-full border transition-colors ${isLight
               ? 'bg-amber-200 border-amber-400 text-amber-950 hover:bg-amber-300'
               : 'bg-white/5 border-white/10 text-amber-400 hover:bg-white/10'
-          }`}
+            }`}
           title="Back to Top"
         >
           <ChevronUp className="w-5 h-5" />
